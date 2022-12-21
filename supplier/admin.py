@@ -15,4 +15,3 @@ class FounderAdmin(admin.ModelAdmin):
     list_display = ['first_name', 'second_name', 'age']
     ordering = ['-age']
     search_fields = ['second_name']
-
