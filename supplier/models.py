@@ -1,11 +1,11 @@
 from core.abstract_models import Abstract
 from django.db import models
-from django_countries import Countries
+from django_countries.fields import CountryField
 
 # Create your models here.
 class Supplier(Abstract):
     name = models.CharField(max_length=255)
-    location = Countries()
+    location = CountryField()
     contact = models.EmailField()
     auto = models.CharField(max_length=255)
     reviews = models.TextField(blank=True)
