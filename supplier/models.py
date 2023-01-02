@@ -5,7 +5,7 @@ from django_countries.fields import CountryField
 # Create your models here.
 class Supplier(Abstract):
     name = models.CharField(max_length=255)
-    location = CountryField()
+    location = CountryField(default = 'Germany')
     contact = models.EmailField()
     auto = models.CharField(max_length=255)
     reviews = models.TextField(blank=True)
